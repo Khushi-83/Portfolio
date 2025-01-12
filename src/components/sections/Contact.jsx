@@ -133,7 +133,7 @@ const Contact = () => {
     emailjs.sendForm("service_74tp4pc", form.current, "P_brkE5CLc52ZC3ll").then(
       (result) => {
         alert("Message Sent");
-        form.current.resut();
+        form.current.reset();
       },
       (error) => {
         alert(error);
