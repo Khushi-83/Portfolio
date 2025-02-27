@@ -355,64 +355,64 @@ export const education = [
 ];
 
 export const projects = [
-  {
-    id: 11,
-    title: "MobyInk",
-    date: "Feb 2024 - Mar 2023",
-    description:
-      "Mobyink is a mobile app marketing and digital marketing company. It provides services like app store optimization, app marketing, and digital marketing. I build the website using React.js and Material UI. The website is fully responsive and has a great user interface.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p1.png?alt=media&token=3f7727bd-5d7a-4e22-a078-59048acb4c67",
-    tags: ["React Js", "Material UI", "Emotion Js", "GSAP"],
-    category: "web app",
-    github: "https://github.com/imanshu822/mobyink.git",
-    webapp: "https://mobyink.com/",
-  },
+  // {
+  //   id: 11,
+  //   title: "MobyInk",
+  //   date: "Feb 2024 - Mar 2023",
+  //   description:
+  //     "Mobyink is a mobile app marketing and digital marketing company. It provides services like app store optimization, app marketing, and digital marketing. I build the website using React.js and Material UI. The website is fully responsive and has a great user interface.",
+  //   image:
+  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p1.png?alt=media&token=3f7727bd-5d7a-4e22-a078-59048acb4c67",
+  //   tags: ["React Js", "Material UI", "Emotion Js", "GSAP"],
+  //   category: "web app",
+  //   github: "https://github.com/imanshu822/mobyink.git",
+  //   webapp: "https://mobyink.com/",
+  // },
   {
     id: 1,
-    title: "Saniro",
+    title: "Rentopia: A Rented Hub",
     date: "Jan 2024 - Mar 2024",
-    description:"fghj",
+    description:"Created an innovative rental platform connecting renters and landlords with robust search filters and secure payment options.",
     image:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p3.png?alt=media&token=2790ef48-ea76-4ee8-8c69-e6b3a01a05a1",
-    tags: ["React Js", "Material UI", "Emotion Js", "Redux", "NodeMailer"],
+    tags: ["NextJs, Tailwind CSS, PocketBase"],
     category: "web app",
-    github: "https://github.com/imanshu822/saniiroLight",
-    webapp: "https://saniiro.vercel.app/",
+    github: "https://github.com/Khushi-83/Rentopedia",
+    webapp: "https://rentopedia-rents.vercel.app/",
   },
-  {
-    id: 3,
-    title: "Privily Pods Booking ",
-    date: "Jan 2024 - Apr 2024",
-    description:"dfghj",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p4.png?alt=media&token=acf48105-bca1-4436-bdcb-04891ed9f2f6",
-    tags: [
-      "Node Js",
-      "Express Js",
-      "MongoDB",
-      "React Js",
-      "Material UI",
-      "Redux",
-      "NodeMailer",
-      "IoT Device Integration",
-      "API Integration",
-    ],
-    category: "web app",
-    github: "https://github.com/imanshu822/privily_backend.git",
-    webapp: "https://privily.co/",
-  },
-  {
-    id: 0,
-    title: "Movix - Movie Search App",
-    date: "Apr 2023 - May 2023",
-    description:"fghjk",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p2.png?alt=media&token=5124de39-9687-428e-b64f-a9044bd46220",
-    tags: ["React Js", "TMDB API", "Lazy Loading", "Redux"],
-    category: "web app",
-    github: "https://github.com/imanshu822/movix-anshu",
-    webapp: "https://movix-eta.vercel.app/",
+  // {
+  //   id: 3,
+  //   title: "Privily Pods Booking ",
+  //   date: "Jan 2024 - Apr 2024",
+  //   description:"dfghj",
+  //   image:
+  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p4.png?alt=media&token=acf48105-bca1-4436-bdcb-04891ed9f2f6",
+  //   tags: [
+  //     "Node Js",
+  //     "Express Js",
+  //     "MongoDB",
+  //     "React Js",
+  //     "Material UI",
+  //     "Redux",
+  //     "NodeMailer",
+  //     "IoT Device Integration",
+  //     "API Integration",
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/imanshu822/privily_backend.git",
+  //   webapp: "https://privily.co/",
+  // },
+  // {
+  //   id: 0,
+  //   title: "Movix - Movie Search App",
+  //   date: "Apr 2023 - May 2023",
+  //   description:"fghjk",
+  //   image:
+  //     "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p2.png?alt=media&token=5124de39-9687-428e-b64f-a9044bd46220",
+  //   tags: ["React Js", "TMDB API", "Lazy Loading", "Redux"],
+  //   category: "web app",
+  //   github: "https://github.com/imanshu822/movix-anshu",
+  //   webapp: "https://movix-eta.vercel.app/",
     // member: [
     //   {
     //     name: "Rishav Chanda",
@@ -427,32 +427,32 @@ export const projects = [
     //     github: "https://github.com/upasana0710",
     //   },
     // ],
-  },
-  {
-    id: 9,
-    title: "Trackify",
-    date: "May 2024",
-    description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-    ],
-    category: "web app",
-    github: "https://github.com/imanshu822/trackify",
-    webapp: "https://trackify-management.netlify.app/",
-  },
+  // },
+  // {
+  //   id: 9,
+  //   title: "Trackify",
+  //   date: "May 2024",
+  //   description:
+  //     "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+  //   image:
+  //     "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+  //   tags: [
+  //     "Docker",
+  //     "AWS",
+  //     "DuckDNS",
+  //     "Eslint",
+  //     "Husky",
+  //     "CI/CD",
+  //     "React Js",
+  //     "MongoDb",
+  //     "Node Js",
+  //     "Express Js",
+  //     "Redux",
+  //   ],
+  //   category: "web app",
+  //   github: "https://github.com/imanshu822/trackify",
+  //   webapp: "https://trackify-management.netlify.app/",
+  // },
   // {
   //   id: 2,
   //   title: "Brain Tumor Detection",
@@ -494,42 +494,43 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Job-finder-App",
   //   webapp: "https://github.com/rishavchanda/Job-finder-App",
   // },
-  {
-    id: 4,
-    title: "Whatsapp Clone",
-    date: "Jul 2022",
-    description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-    category: "web app",
-    // github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
-  },
+  // {
+  //   id: 4,
+  //   title: "Whatsapp Clone",
+  //   date: "Jul 2022",
+  //   description:
+  //     "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+  //   image:
+  //     "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
+  //   tags: ["React Js", "Firebase", "Firestore", "Node JS"],
+  //   category: "web app",
+  //   github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
+  //   webapp: "https://whatsapp-clone-rishav.web.app",
+  // },
   {
     id: 5,
-    title: "Youtube Clone",
-    date: "Fab 2024",
+    title: "PlayTube",
+    date: "March 2024",
     description: "YouTube Clone web app",
     image:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/p5.png?alt=media&token=37af941b-6cc6-480a-988f-fee863f544e4",
     tags: ["React Js", "Material Ui", "API Integration", "Node JS"],
     category: "web app",
-    github: "https://github.com/imanshu822/YouTubeClone",
-    webapp: "https://you-tube-clone-mocha.vercel.app/",
+    github: "https://github.com/Khushi-83/PlayTube",
+    webapp: "https://vercel.com/khushi-83s-projects/play-tube",
   },
   {
     id: 6,
-    title: "ResQ Connect",
-    date: "Jun 2023",
-    description:"dfghjk",
+    title: "HopeforHelp-Hive",
+    date: "January 2025",
+    description:"Website aimed at enhancing collaboration and coordination among emergency response agencies during disasters. It Connect facilitates efficient resource utilization by enabling real-time communication and live tracking of agents."
+      ,
     image:
       "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/Screenshot%202024-05-26%20at%204.13.54%E2%80%AFPM.png?alt=media&token=966d5abe-87c9-4eff-b10c-292203f3f061",
     tags: ["React Js", "API", "Axios", "Node JS"],
     category: "web app",
-    github: "https://github.com/imanshu822/resqConnect",
-    webapp: "https://resq-connect.vercel.app/login",
+    github: "https://github.com/Khushi-83/HopeforHelp-hive",
+    webapp: "https://hopefor-help-hive.vercel.app/login",
   },
   // {
   //   id: 7,
@@ -544,17 +545,17 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Quiz-Earn",
   //   webapp: "https://github.com/rishavchanda/Quiz-Earn",
   // },
-  {
-    id: 8,
-    title: "Face Recognition",
-    date: "Jan 2021",
-    description:
-      "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-    image:
-      "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    // github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-    // webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  },
+  // {
+  //   id: 8,
+  //   title: "Face Recognition",
+  //   date: "Jan 2021",
+  //   description:
+  //     "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
+  //   image:
+  //     "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
+  //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
+  //   category: "machine learning",
+  //   // github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+  //   // webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+  // },
 ];
