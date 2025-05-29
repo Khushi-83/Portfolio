@@ -501,7 +501,7 @@ export const projects = [
     description:
       "a QR-based ordering system with categorized menus, song requests, and online payments via Cashfree. Customers can scan QR codes to view the menu, place orders, and make payments. The system also allows customers to request songs from a curated list. The admin dashboard provides real-time management of orders, menus, and customer feedback using Supabase and WebSockets.",
     image:
-      "https://github.com/Khushi-83/Restaurant-Management/blob/main/Restaurant-management-web.png",
+      "https://raw.githubusercontent.com/Khushi-83/Restaurant-Management/main/Restaurant-management-web.png?token=GHSAT0AAAAAADDDWTKSIIWDDZQEV3E32LBC2BYMC2Q",
     tags: ["React.js, Node.js, Supabase, Cashfree, WebSockets, Tailwind CSS"],
     category: "web app",
     github: "https://github.com/Khushi-83/Restaurant-Management",
