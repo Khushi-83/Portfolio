@@ -494,19 +494,19 @@ export const projects = [
   //   github: "https://github.com/rishavchanda/Job-finder-App",
   //   webapp: "https://github.com/rishavchanda/Job-finder-App",
   // },
-  // {
-  //   id: 4,
-  //   title: "Whatsapp Clone",
-  //   date: "Jul 2022",
-  //   description:
-  //     "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-  //   image:
-  //     "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-  //   tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-  //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-  //   webapp: "https://whatsapp-clone-rishav.web.app",
-  // },
+  {
+    id: 4,
+    title: "Restaurant Management System",
+    date: "Feb 2025",
+    description:
+      "a QR-based ordering system with categorized menus, song requests, and online payments via Cashfree. Customers can scan QR codes to view the menu, place orders, and make payments. The system also allows customers to request songs from a curated list. The admin dashboard provides real-time management of orders, menus, and customer feedback using Supabase and WebSockets.",
+    image:
+      "https://github.com/Khushi-83/Restaurant-Management/blob/main/Restaurant-management-web.png",
+    tags: ["React.js, Node.js, Supabase, Cashfree, WebSockets, Tailwind CSS"],
+    category: "web app",
+    github: "https://github.com/Khushi-83/Restaurant-Management",
+    webapp: "https://restaurant-management-pied.vercel.app/",
+  },
   {
     id: 5,
     title: "PlayTube",
