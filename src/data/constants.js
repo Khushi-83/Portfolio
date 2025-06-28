@@ -5,7 +5,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Khushi-83",
   resume:
-    "https://drive.google.com/file/d/13xWUsmPKlrFlmcLruhAbXTrY_K406k8M/view?usp=sharing",
+    "https://drive.google.com/file/d/1Pqstq4iBjpCK5bkp0Owj17uSR8YBi8oy/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/khushisinha83/",
   insta: "https://www.instagram.com/khus_hi_sinha/",
 
@@ -84,54 +84,54 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
       },
-      {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
+      // {
+      //   name: "Firebase",
+      //   image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+      // },
     ],
   },
   {
     title: "DevOps",
     skills: [
-      {
-        name: "AWS",
-        image:
-          "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
-      },
-      {
-        name: "Google Cloud",
-        image:
-          "https://static-00.iconduck.com/assets.00/google-cloud-platform-logo-icon-2048x1824-pg4wzspq.png",
-      },
+      // {
+      //   name: "AWS",
+      //   image:
+      //     "https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png",
+      // },
+      // {
+      //   name: "Google Cloud",
+      //   image:
+      //     "https://static-00.iconduck.com/assets.00/google-cloud-platform-logo-icon-2048x1824-pg4wzspq.png",
+      // },
       {
         name: "Docker",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
-      {
-        name: "Jenkins",
-        image:
-          "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
-      },
-      {
-        name: "Nginx",
-        image: "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
-      },
-      {
-        name: "Grafana",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
-      },
+      // {
+      //   name: "Jenkins",
+      //   image:
+      //     "https://toppng.com/uploads/preview/jenkins-logo-11609365847mufysaivph.png",
+      // },
+      // {
+      //   name: "Nginx",
+      //   image: "https://download.logo.wine/logo/Nginx/Nginx-Logo.wine.png",
+      // },
+      // {
+      //   name: "Grafana",
+      //   image:
+      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
+      // },
       {
         name: "Kubernetes",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png",
       },
-      {
-        name: "Prometheus",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png",
-      },
+      // {
+      //   name: "Prometheus",
+      //   image:
+      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/1200px-Prometheus_software_logo.svg.png",
+      // },
     ],
   },
   // {
@@ -227,16 +227,16 @@ export const skills = [
         image:
           "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
       },
-      {
-        name: "Adobe XD",
-        image:
-          "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
-      },
-      {
-        name: "Figma",
-        image:
-          "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
-      },
+      // {
+      //   name: "Adobe XD",
+      //   image:
+      //     "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
+      // },
+      // {
+      //   name: "Figma",
+      //   image:
+      //     "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
+      // },
     ],
   },
 ];
@@ -501,7 +501,7 @@ export const projects = [
     description:
       "a QR-based ordering system with categorized menus, song requests, and online payments via Cashfree. Customers can scan QR codes to view the menu, place orders, and make payments. The system also allows customers to request songs from a curated list. The admin dashboard provides real-time management of orders, menus, and customer feedback using Supabase and WebSockets.",
     image:
-      "https://raw.githubusercontent.com/Khushi-83/Restaurant-Management/main/Restaurant-management-web.png?token=GHSAT0AAAAAADDDWTKSIIWDDZQEV3E32LBC2BYMC2Q",
+      "https://github.com/Khushi-83/Restaurant-Management/raw/main/Restaurant-management-web.png",
     tags: ["React.js, Node.js, Supabase, Cashfree, WebSockets, Tailwind CSS"],
     category: "web app",
     github: "https://github.com/Khushi-83/Restaurant-Management",
