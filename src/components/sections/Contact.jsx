@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2"; // 👈 import SweetAlert2
 import EarthCanvas from "../canvas/Earth";
 
+// Styled components
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -51,6 +53,7 @@ const Desc = styled.div`
     font-size: 16px;
   }
 `;
+
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -64,12 +67,14 @@ const ContactForm = styled.form`
   margin-top: 28px;
   gap: 12px;
 `;
+
 const ContactTitle = styled.div`
   font-size: 28px;
   margin-bottom: 6px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `;
+
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
@@ -83,6 +88,7 @@ const ContactInput = styled.input`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
@@ -96,6 +102,7 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
@@ -130,15 +137,33 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm("service_2cyctnr", "template_caznmxl", form.current, "P_brkE5CLc52ZC3ll").then(
-      (result) => {
-        alert("Message Sent");
-        form.current.reset();
-      },
-      (error) => {
-        alert(error);
-      }
-    );
+
+    emailjs
+      .sendForm(
+        "service_2cyctnr",       // ✅ Your EmailJS service ID
+        "template_caznmxl",      // ✅ Your EmailJS template ID
+        form.current,
+        "P_brkE5CLc52ZC3ll"      // ✅ Your EmailJS public key
+      )
+      .then(
+        (result) => {
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thanks for reaching out. I'll get back to you soon!",
+            confirmButtonColor: "#7F00FF",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong. Please try again later.",
+            confirmButtonColor: "#d33",
+          });
+        }
+      );
   };
 
   return (
@@ -151,10 +176,10 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
+          <ContactInput placeholder="Your Email" name="from_email" required />
+          <ContactInput placeholder="Your Name" name="from_name" required />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage placeholder="Message" name="message" rows={4} required />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
       </Wrapper>
