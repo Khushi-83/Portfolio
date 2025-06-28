@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-import Swal from "sweetalert2"; // 👈 import SweetAlert2
+import Swal from "sweetalert2"; 
 import EarthCanvas from "../canvas/Earth";
 
 // Styled components

@@ -188,6 +188,11 @@ const Navbar = () => {
             Github Profile
           </GithubButton>
         </ButtonContainer>
+        <ButtonContainer>
+          <GithubButton href={Bio.leetcode} target="_Blank">
+            Leetcode Profile
+          </GithubButton>
+        </ButtonContainer>
       </NavbarContainer>
     </Nav>
   );
