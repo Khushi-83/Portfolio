@@ -16,6 +16,7 @@ const Nav = styled.div`
   z-index: 10;
   color: white;
 `;
+
 const ColorText = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 32px;
@@ -30,6 +31,7 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
 `;
+
 const NavLogo = styled(LinkR)`
   display: flex;
   align-items: center;
@@ -78,7 +80,7 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const GithubButton = styled.a`
+const ProfileButton = styled.a`
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   justify-content: center;
@@ -89,11 +91,18 @@ const GithubButton = styled.a`
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 500;
+  margin-left: 12px;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
+
   &:hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.text_primary};
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    width: 100%;
   }
 `;
 
@@ -116,13 +125,11 @@ const MobileMenu = styled.ul`
   gap: 16px;
   padding: 0 6px;
   list-style: none;
-  width: 100%;
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light + 99};
   position: absolute;
   top: 80px;
   right: 0;
-
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
@@ -135,6 +142,7 @@ const MobileMenu = styled.ul`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
+
   return (
     <Nav>
       <NavbarContainer>
@@ -157,41 +165,48 @@ const Navbar = () => {
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
+            <NavLink onClick={() => setIsOpen(false)} href="#About">
               About
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
+            <NavLink onClick={() => setIsOpen(false)} href="#Skills">
               Skills
             </NavLink>
-            
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+            <NavLink onClick={() => setIsOpen(false)} href="#Projects">
               Projects
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
+            <NavLink onClick={() => setIsOpen(false)} href="#Education">
               Education
             </NavLink>
-            <GithubButton
+            <ProfileButton
               href={Bio.github}
-              target="_Blank"
+              target="_blank"
               style={{
                 background: theme.primary,
                 color: theme.text_primary,
               }}
             >
-              Github Profile
-            </GithubButton>
+              GitHub Profile
+            </ProfileButton>
+            <ProfileButton
+              href={Bio.leetcode}
+              target="_blank"
+              style={{
+                background: theme.primary,
+                color: theme.text_primary,
+              }}
+            >
+              LeetCode Profile
+            </ProfileButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
-            Github Profile
-          </GithubButton>
-        </ButtonContainer>
-        <ButtonContainer>
-          <GithubButton href={Bio.leetcode} target="_Blank">
-            Leetcode Profile
-          </GithubButton>
+          <ProfileButton href={Bio.github} target="_blank">
+            GitHub Profile
+          </ProfileButton>
+          <ProfileButton href={Bio.leetcode} target="_blank">
+            LeetCode Profile
+          </ProfileButton>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>
