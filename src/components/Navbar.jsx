@@ -91,7 +91,12 @@ const ProfileButton = styled.a`
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 500;
-  margin-left: 12px;
+  margin-left: 8px; // reduced spacing between buttons
+
+  &:first-child {
+    margin-left: 0;
+  }
+
   transition: all 0.6s ease-in-out;
   text-decoration: none;
 
