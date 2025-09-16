@@ -331,7 +331,7 @@ export const education = [
     img: "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/cu.png?alt=media&token=c4b80e7d-739e-4cbe-a087-df9593d1fe3e",
     school: "Chandigarh University, Mohali",
     date: "Aug 2021 - July 2025",
-    grade: " 7.34 CGPA",
+    grade: " 7.42 CGPA",
     desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Chandigarh University. I have completed 6 semesters and have a CGPA of 8.02 . I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others.",
     degree: "Bachelor of Engineering - BE, Computer Science and Engineering",
   },
