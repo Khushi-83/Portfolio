@@ -229,7 +229,7 @@ export const skills = [
   export const experience = [
   {
     id: 1,
-    img: "CrownedConceptLogo",
+    img: CrownedConceptLogo,
     role: "Fullstack Intern",
     company: "Crowned Concept",
     date: "September 2025 - Present",
@@ -272,7 +272,7 @@ export const skills = [
   // },
   {
     id: 0,
-    img: "YardstickLogo",
+    img: YardstickLogo,
     role: "Fullstack Intern",
     company: "Yardstick",
     date: "October 2025 - Present",
