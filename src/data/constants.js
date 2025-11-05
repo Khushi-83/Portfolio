@@ -1,3 +1,6 @@
+import CrownedConceptLogo from "../images/Crowned_Concept-removebg-preview.png";
+import YardstickLogo from "../images/Yardstick.jpg";
+
 export const Bio = {
   name: "Khushi Sinha",
   roles: ["Frontend Developer", "Backend Developer", "Problem Solver"],
@@ -11,6 +14,7 @@ export const Bio = {
   insta: "https://www.instagram.com/khus_hi_sinha/",
 
 };
+
 
 export const skills = [
   {
@@ -208,11 +212,7 @@ export const skills = [
         image:
           "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       },
-      // {
-      //   name: "Netlify",
-      //   image:
-      //     "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-      // },
+      
       {
         name: "VS Code",
         image:
@@ -223,23 +223,13 @@ export const skills = [
         image:
           "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
       },
-      // {
-      //   name: "Adobe XD",
-      //   image:
-      //     "https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667",
-      // },
-      // {
-      //   name: "Figma",
-      //   image:
-      //     "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
-      // },
     ],
   },
 ];
   export const experience = [
   {
-    id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/portfolio-88aa4.appspot.com/o/Screenshot%202024-05-26%20at%202.44.10%E2%80%AFPM.png?alt=media&token=99021a79-fb72-4088-bace-c93613d31d64",
+    id: 1,
+    img: "CrownedConceptLogo",
     role: "Fullstack Intern",
     company: "Crowned Concept",
     date: "September 2025 - Present",
@@ -281,8 +271,8 @@ export const skills = [
   //   doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/WhatsApp%20Image%202023-05-05%20at%2012.07.39%20AM.jpeg?alt=media&token=9f0e1648-568b-422d-bd0b-1f125f722245",
   // },
   {
-    id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    id: 0,
+    img: "YardstickLogo",
     role: "Fullstack Intern",
     company: "Yardstick",
     date: "October 2025 - Present",
@@ -311,14 +301,14 @@ export const skills = [
 //     desc: "As a Backend developer at the WaysAhead Global, I have had the opportunity to work on exciting projects and collaborate with talented developers who share my passion for technology. I have designed and developed kalaa planet a painting selling e comerce website. ",
 //     skills: ["Leadership", "php", "MySQL", "Figma"],
 //   },
-//   {
-//     id: 2,
-//     img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
-//     role: "Open Source Contributor ",
-//     company: "",
-//     date: "May 2023 - Present",
-//     desc: "Contributed to different open-source projects and learn from industry experts",
-//   },
+  {
+    id: 2,
+    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/girlScript.jpeg?alt=media&token=e656a621-cf3c-4230-bf0f-e74b4cec6035",
+    role: "Open Source Contributor ",
+    company: "",
+    date: "May 2023 - Present",
+    desc: "Contributed to different open-source projects and learn from industry experts",
+  },
  ];
 
 export const education = [

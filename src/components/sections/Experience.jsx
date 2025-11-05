@@ -70,18 +70,20 @@ const Experience = () => {
               contentArrowStyle={{ borderRight: "7px solid rgba(255,255,255,0.1)" }}
               date={exp.date}
               iconStyle={{
-                background: exp.iconBg || "#232631",
+                background: "#232631",
                 color: "#fff",
               }}
+              // ✅ use exp.img instead of exp.icon
               icon={
                 <img
-                  src={exp.icon}
+                  src={exp.img}
                   alt={exp.company}
                   style={{
                     width: "60%",
                     height: "60%",
                     objectFit: "contain",
                     margin: "auto",
+                    borderRadius: "50%",
                   }}
                 />
               }
