@@ -8,7 +8,7 @@ const Card = styled.div`
   border-radius: 12px;
   padding: 20px;
   gap: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
 const TopSection = styled.div`
@@ -63,23 +63,27 @@ const SkillTag = styled.span`
   border-radius: 20px;
 `;
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience = {} }) => {
   return (
     <Card>
       <TopSection>
-        <Img src={experience.img} alt={experience.company} />
+        {experience.img && (
+          <Img src={experience.img} alt={experience.company || "Company"} />
+        )}
         <div>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{experience.role || "Role"}</Role>
+          <Company>{experience.company || "Company"}</Company>
+          <Date>{experience.date || ""}</Date>
         </div>
       </TopSection>
-      <Desc>{experience.desc}</Desc>
-      <Skills>
-        {experience.skills.map((skill, index) => (
-          <SkillTag key={index}>{skill}</SkillTag>
-        ))}
-      </Skills>
+      {experience.desc && <Desc>{experience.desc}</Desc>}
+      {Array.isArray(experience.skills) && experience.skills.length > 0 && (
+        <Skills>
+          {experience.skills.map((skill, index) => (
+            <SkillTag key={index}>{skill}</SkillTag>
+          ))}
+        </Skills>
+      )}
     </Card>
   );
 };
