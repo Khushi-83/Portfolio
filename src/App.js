@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
+import Experience from "./components/sections/Experience";
 import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
 import Education from "./components/sections/Education";
@@ -38,6 +39,7 @@ const Wrapper = styled.div`
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+
   return (
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
@@ -47,16 +49,29 @@ function App() {
           <AnimatePresence>
             <div>
               <Hero />
+
+              {/* Section 1: Skills */}
               <Wrapper>
                 <Skills />
               </Wrapper>
+
+              {/* ✅ New Section 2: Experience */}
+              <Wrapper>
+                <Experience />
+              </Wrapper>
+
+              {/* Section 3: Projects */}
               <Projects openModal={openModal} setOpenModal={setOpenModal} />
+
+              {/* Section 4: Education + Contact */}
               <Wrapper>
                 <Education />
                 <Contact />
               </Wrapper>
+
               <Footer />
 
+              {/* Project Modal */}
               {openModal.state && (
                 <ProjectDetails
                   openModal={openModal}
