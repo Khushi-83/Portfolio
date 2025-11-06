@@ -4,12 +4,14 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  background: ${({ theme }) => theme.card};
+  background: transparent; /* <-- remove white background */
+  border: 1px solid ${({ theme }) => theme.text_secondary + "20"}; /* optional subtle border */
   border-radius: 12px;
   padding: 20px;
   gap: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: none; /* <-- remove box shadow that caused white glow */
 `;
+
 
 const TopSection = styled.div`
   display: flex;

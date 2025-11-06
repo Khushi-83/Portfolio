@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { experience } from "../../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
 const Container = styled.div`
@@ -58,43 +61,44 @@ const Experience = () => {
         <Title>Experience</Title>
         <Desc>My experiences in the professional world.</Desc>
 
-
-
-<VerticalTimeline>
-  {experience.map((exp, index) => (
-    <VerticalTimelineElement
-      key={index}
-      // ... (contentStyle, contentArrowStyle, date props) ...
-
-      // --- 👇 UPDATE THIS PROP 👇 ---
-      iconStyle={{
-        background: "#232631",
-        color: "#fff",
-        // ADD THESE 3 LINES TO FORCE CENTERING:
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-      // --- END OF UPDATE ---
-
-      icon={
-        <img
-          src={exp.img}
-          alt={exp.company}
-          style={{
-            // Keep the previous fix:
-            width: "60%",
-            height: "60%",
-            objectFit: "contain",
-            // (Ensure margin: "auto" and borderRadius: "50%" are GONE)
-          }}
-        />
-      }
-    >
-      <ExperienceCard experience={exp} />
-    </VerticalTimelineElement>
-  ))}
-</VerticalTimeline>
+        <VerticalTimeline>
+          {experience.map((exp, index) => (
+            <VerticalTimelineElement
+              key={index}
+              date={exp.date}
+              // --- 👇 UPDATED TO REMOVE WHITE BACKGROUND 👇 ---
+              contentStyle={{
+                background: "transparent",
+                color: "#fff",
+                boxShadow: "none",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid rgba(255, 255, 255, 0.1)",
+              }}
+              iconStyle={{
+                background: "#232631",
+                color: "#fff",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              icon={
+                <img
+                  src={exp.img}
+                  alt={exp.company}
+                  style={{
+                    width: "60%",
+                    height: "60%",
+                    objectFit: "contain",
+                  }}
+                />
+              }
+            >
+              <ExperienceCard experience={exp} />
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </Wrapper>
     </Container>
   );
