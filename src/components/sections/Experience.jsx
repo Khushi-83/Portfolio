@@ -61,40 +61,41 @@ const Experience = () => {
         <Title>Experience</Title>
         <Desc>My experiences in the professional world.</Desc>
 
-        <VerticalTimeline>
-          {experience.map((exp, index) => (
-            <VerticalTimelineElement
-              key={index}
-              contentStyle={{
-                background: "rgba(255, 255, 255, 0.05)",
-                color: "#fff",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-              contentArrowStyle={{ borderRight: "7px solid rgba(255,255,255,0.1)" }}
-              date={exp.date}
-              iconStyle={{
-                background: "#232631",
-                color: "#fff",
-              }}
-              // ✅ use exp.img instead of exp.icon
-              icon={
-                <img
-                  src={exp.img}
-                  alt={exp.company}
-                  style={{
-                    width: "60%",
-                    height: "60%",
-                    objectFit: "contain",
-                   // margin: "auto",
-                    //borderRadius: "50%",
-                  }}
-                />
-              }
-            >
-              <ExperienceCard experience={exp} />
-            </VerticalTimelineElement>
-          ))}
-        </VerticalTimeline>
+<VerticalTimeline>
+  {experience.map((exp, index) => (
+    <VerticalTimelineElement
+      key={index}
+      // ... (contentStyle, contentArrowStyle, date props) ...
+
+      // --- 👇 UPDATE THIS PROP 👇 ---
+      iconStyle={{
+        background: "#232631",
+        color: "#fff",
+        // ADD THESE 3 LINES TO FORCE CENTERING:
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      // --- END OF UPDATE ---
+
+      icon={
+        <img
+          src={exp.img}
+          alt={exp.company}
+          style={{
+            // Keep the previous fix:
+            width: "60%",
+            height: "60%",
+            objectFit: "contain",
+            // (Ensure margin: "auto" and borderRadius: "50%" are GONE)
+          }}
+        />
+      }
+    >
+      <ExperienceCard experience={exp} />
+    </VerticalTimelineElement>
+  ))}
+</VerticalTimeline>
       </Wrapper>
     </Container>
   );
