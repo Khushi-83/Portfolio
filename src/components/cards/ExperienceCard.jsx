@@ -1,140 +1,82 @@
 import React from "react";
 import styled from "styled-components";
-import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
-const Top = styled.div`
-  width: 100%;
-  display: flex;
-  max-width: 100%;
-  gap: 12px;
-`;
-
-const Image = styled.img`
-  height: 50px;
-  border-radius: 10px;
-  margin-top: 4px;
-
-  @media only screen and (max-width: 768px) {
-    height: 40px;
-  }
-`;
-
-const Body = styled.div`
-  width: 100%;
+const Card = styled.div`
   display: flex;
   flex-direction: column;
+  background: ${({ theme }) => theme.card};
+  border-radius: 12px;
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
-const Role = styled.div`
-  font-size: 18px;
+const TopSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`;
+
+const Img = styled.img`
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+`;
+
+const Role = styled.h3`
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 22px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary + 99};
-
-  @media only screen and (max-width: 768px) {
-    font-size: 14px;
-  }
 `;
 
-const Company = styled.div`
-  font-size: 14px;
+const Company = styled.h4`
+  color: ${({ theme }) => theme.text_secondary};
+  font-size: 18px;
   font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
 `;
 
-const Date = styled.div`
-  font-size: 12px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
+const Date = styled.span`
+  color: ${({ theme }) => theme.text_secondary};
+  font-size: 14px;
 `;
 
-const Description = styled.div`
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
+const Desc = styled.p`
+  color: ${({ theme }) => theme.text_primary};
+  font-size: 16px;
+  margin-top: 8px;
+  line-height: 1.5;
 `;
 
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 8px;
 `;
 
 const SkillTag = styled.span`
   background: ${({ theme }) => theme.primary + "20"};
   color: ${({ theme }) => theme.primary};
-  font-size: 13px;
+  font-size: 14px;
   padding: 6px 12px;
   border-radius: 20px;
 `;
 
-// ✅ FIXED ICON WRAPPER for centered circle logo
-const IconWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #1d1836;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-`;
-
-const IconImage = styled.img`
-  width: 65%;
-  height: 65%;
-  object-fit: contain;
-  display: block;
-`;
-
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience = {} }) => {
   return (
-    <VerticalTimelineElement
-      icon={
-        <IconWrapper>
-          <IconImage src={experience.img} alt={experience.company} />
-        </IconWrapper>
-      }
-      contentStyle={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
-        border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
-      }}
-      contentArrowStyle={{
-        borderRight: "7px solid rgba(255, 255, 255, 0.3)",
-      }}
-      date={experience.date}
-    >
-      <Top>
-        <Image src={experience.img} alt={experience.company} />
-        <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
-        </Body>
-      </Top>
-
-      {experience.desc && <Description>{experience.desc}</Description>}
-
+    <Card>
+      <TopSection>
+        {experience.img && (
+          <Img src={experience.img} alt={experience.company || "Company"} />
+        )}
+        <div>
+          <Role>{experience.role || "Role"}</Role>
+          <Company>{experience.company || "Company"}</Company>
+          <Date>{experience.date || ""}</Date>
+        </div>
+      </TopSection>
+      {experience.desc && <Desc>{experience.desc}</Desc>}
       {Array.isArray(experience.skills) && experience.skills.length > 0 && (
         <Skills>
           {experience.skills.map((skill, index) => (
@@ -142,7 +84,7 @@ const ExperienceCard = ({ experience }) => {
           ))}
         </Skills>
       )}
-    </VerticalTimelineElement>
+    </Card>
   );
 };
 
