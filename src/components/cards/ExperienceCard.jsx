@@ -1,170 +1,149 @@
 import React from "react";
 import styled from "styled-components";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
-// ---------- Timeline Styles ----------
-const TimelineContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 60px 0;
-`;
-
-const TimelineLine = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background-color: ${({ theme }) => theme.text_secondary};
-  transform: translateX(-50%);
-  z-index: 0;
-`;
-
-const TimelineItem = styled.div`
-  position: relative;
+const Top = styled.div`
   width: 100%;
   display: flex;
-  justify-content: ${({ side }) => (side === "left" ? "flex-end" : "flex-start")};
-  margin: 40px 0;
+  max-width: 100%;
+  gap: 12px;
 `;
 
-const TimelineContent = styled.div`
-  width: 45%;
-  z-index: 2;
+const Image = styled.img`
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 4px;
+
+  @media only screen and (max-width: 768px) {
+    height: 40px;
+  }
 `;
 
-const TimelineIcon = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 3px solid white;
-  background-color: ${({ theme }) => theme.card};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-`;
-
-const IconImage = styled.img`
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
-  display: block;
-`;
-
-// ---------- Experience Card Styles ----------
-const Card = styled.div`
+const Body = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  background: ${({ theme }) => theme.card};
-  border-radius: 12px;
-  padding: 20px;
-  gap: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 `;
 
-const TopSection = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-`;
-
-const Img = styled.img`
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 10px;
-`;
-
-const Role = styled.h3`
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 22px;
-  font-weight: 600;
-`;
-
-const Company = styled.h4`
-  color: ${({ theme }) => theme.text_secondary};
+const Role = styled.div`
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_primary + 99};
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
-const Date = styled.span`
-  color: ${({ theme }) => theme.text_secondary};
+const Company = styled.div`
   font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary + 99};
+
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
-const Desc = styled.p`
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 16px;
-  margin-top: 8px;
-  line-height: 1.5;
+const Date = styled.div`
+  font-size: 12px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary + 80};
+
+  @media only screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
+const Description = styled.div`
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_primary + 99};
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 8px;
 `;
 
 const SkillTag = styled.span`
   background: ${({ theme }) => theme.primary + "20"};
   color: ${({ theme }) => theme.primary};
-  font-size: 14px;
+  font-size: 13px;
   padding: 6px 12px;
   border-radius: 20px;
 `;
 
-// ---------- Components ----------
-const ExperienceCard = ({ experience = {} }) => {
-  const { img, company, role, date, desc, skills } = experience || {};
+// ✅ FIXED ICON WRAPPER for centered circle logo
+const IconWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #1d1836;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`;
 
+const IconImage = styled.img`
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  display: block;
+`;
+
+const ExperienceCard = ({ experience }) => {
   return (
-    <Card>
-      <TopSection>
-        {img && <Img src={img} alt={company || "Company"} />}
-        <div>
-          {role && <Role>{role}</Role>}
-          {company && <Company>{company}</Company>}
-          {date && <Date>{date}</Date>}
-        </div>
-      </TopSection>
+    <VerticalTimelineElement
+      icon={
+        <IconWrapper>
+          <IconImage src={experience.img} alt={experience.company} />
+        </IconWrapper>
+      }
+      contentStyle={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+        background: "#1d1836",
+        color: "#fff",
+        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+        backgroundColor: "rgba(17, 25, 40, 0.83)",
+        border: "1px solid rgba(255, 255, 255, 0.125)",
+        borderRadius: "6px",
+      }}
+      contentArrowStyle={{
+        borderRight: "7px solid rgba(255, 255, 255, 0.3)",
+      }}
+      date={experience.date}
+    >
+      <Top>
+        <Image src={experience.img} alt={experience.company} />
+        <Body>
+          <Role>{experience.role}</Role>
+          <Company>{experience.company}</Company>
+          <Date>{experience.date}</Date>
+        </Body>
+      </Top>
 
-      {desc && <Desc>{desc}</Desc>}
+      {experience.desc && <Description>{experience.desc}</Description>}
 
-      {Array.isArray(skills) && skills.length > 0 && (
+      {Array.isArray(experience.skills) && experience.skills.length > 0 && (
         <Skills>
-          {skills.map((skill, index) => (
+          {experience.skills.map((skill, index) => (
             <SkillTag key={index}>{skill}</SkillTag>
           ))}
         </Skills>
       )}
-    </Card>
+    </VerticalTimelineElement>
   );
 };
 
-// ---------- Example Timeline Section ----------
-const ExperienceSection = ({ experiences }) => {
-  return (
-    <TimelineContainer>
-      <TimelineLine />
-      {experiences.map((exp, index) => (
-        <TimelineItem key={index} side={index % 2 === 0 ? "left" : "right"}>
-          <TimelineContent>
-            <ExperienceCard experience={exp} />
-          </TimelineContent>
-          <TimelineIcon>
-            <IconImage src={exp.img} alt={exp.company || "Company Logo"} />
-          </TimelineIcon>
-        </TimelineItem>
-      ))}
-    </TimelineContainer>
-  );
-};
-
-export default ExperienceSection;
+export default ExperienceCard;
