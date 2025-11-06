@@ -65,24 +65,18 @@ const Experience = () => {
           {experience.map((exp, index) => (
             <VerticalTimelineElement
               key={index}
-              date={exp.date}
-              // --- 👇 UPDATED TO REMOVE WHITE BACKGROUND 👇 ---
               contentStyle={{
-                background: "transparent",
+                background: "rgba(255, 255, 255, 0.05)",
                 color: "#fff",
-                boxShadow: "none",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                border: "1px solid rgba(255,255,255,0.1)",
               }}
-              contentArrowStyle={{
-                borderRight: "7px solid rgba(255, 255, 255, 0.1)",
-              }}
+              contentArrowStyle={{ borderRight: "7px solid rgba(255,255,255,0.1)" }}
+              date={exp.date}
               iconStyle={{
                 background: "#232631",
                 color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
               }}
+              // ✅ use exp.img instead of exp.icon
               icon={
                 <img
                   src={exp.img}
@@ -91,6 +85,8 @@ const Experience = () => {
                     width: "60%",
                     height: "60%",
                     objectFit: "contain",
+                   // margin: "auto",
+                    //borderRadius: "50%",
                   }}
                 />
               }
