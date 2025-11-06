@@ -9,7 +9,7 @@ export const Bio = {
   github: "https://github.com/Khushi-83",
   leetcode: "https://leetcode.com/u/khushisinha83/",
   resume:
-    "https://drive.google.com/file/d/1Pqstq4iBjpCK5bkp0Owj17uSR8YBi8oy/view?usp=sharing",
+    "https://drive.google.com/file/d/1unC9v0RhjBnF5Rk_wYcGEsTSAv9_2QyG/view?usp=drivesdk",
   linkedin: "https://www.linkedin.com/in/khushisinha83/",
   insta: "https://www.instagram.com/khus_hi_sinha/",
 
