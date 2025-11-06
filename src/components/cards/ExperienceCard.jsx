@@ -1,6 +1,63 @@
 import React from "react";
 import styled from "styled-components";
 
+// ---------- Timeline Styles ----------
+const TimelineContainer = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+`;
+
+const TimelineLine = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: ${({ theme }) => theme.text_secondary};
+  transform: translateX(-50%);
+  z-index: 0;
+`;
+
+const TimelineItem = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: ${({ side }) => (side === "left" ? "flex-end" : "flex-start")};
+  margin: 40px 0;
+`;
+
+const TimelineContent = styled.div`
+  width: 45%;
+  z-index: 2;
+`;
+
+const TimelineIcon = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: ${({ theme }) => theme.card};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+`;
+
+const IconImage = styled.img`
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  display: block;
+`;
+
+// ---------- Experience Card Styles ----------
 const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,23 +120,26 @@ const SkillTag = styled.span`
   border-radius: 20px;
 `;
 
+// ---------- Components ----------
 const ExperienceCard = ({ experience = {} }) => {
+  const { img, company, role, date, desc, skills } = experience || {};
+
   return (
     <Card>
       <TopSection>
-        {experience.img && (
-          <Img src={experience.img} alt={experience.company || "Company"} />
-        )}
+        {img && <Img src={img} alt={company || "Company"} />}
         <div>
-          <Role>{experience.role || "Role"}</Role>
-          <Company>{experience.company || "Company"}</Company>
-          <Date>{experience.date || ""}</Date>
+          {role && <Role>{role}</Role>}
+          {company && <Company>{company}</Company>}
+          {date && <Date>{date}</Date>}
         </div>
       </TopSection>
-      {experience.desc && <Desc>{experience.desc}</Desc>}
-      {Array.isArray(experience.skills) && experience.skills.length > 0 && (
+
+      {desc && <Desc>{desc}</Desc>}
+
+      {Array.isArray(skills) && skills.length > 0 && (
         <Skills>
-          {experience.skills.map((skill, index) => (
+          {skills.map((skill, index) => (
             <SkillTag key={index}>{skill}</SkillTag>
           ))}
         </Skills>
@@ -88,4 +148,23 @@ const ExperienceCard = ({ experience = {} }) => {
   );
 };
 
-export default ExperienceCard;
+// ---------- Example Timeline Section ----------
+const ExperienceSection = ({ experiences }) => {
+  return (
+    <TimelineContainer>
+      <TimelineLine />
+      {experiences.map((exp, index) => (
+        <TimelineItem key={index} side={index % 2 === 0 ? "left" : "right"}>
+          <TimelineContent>
+            <ExperienceCard experience={exp} />
+          </TimelineContent>
+          <TimelineIcon>
+            <IconImage src={exp.img} alt={exp.company || "Company Logo"} />
+          </TimelineIcon>
+        </TimelineItem>
+      ))}
+    </TimelineContainer>
+  );
+};
+
+export default ExperienceSection;
